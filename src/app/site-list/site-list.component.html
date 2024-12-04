@@ -1,0 +1,97 @@
+<div class="container mx-auto my-16">
+  <h1 class="text-5xl mt-0 mb-5">Password Manager</h1>
+  <p class="mb-5">
+    Le Lorem Ipsum est simplement du faux texte employé dans la composition et
+    la mise en page avant impression. Le Lorem Ipsum est le faux texte standard
+    de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
+    ensemble des morceaux de texte pour réaliser un livre spécimen de polices de
+    texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à
+    la bureautique informatique, sans que son contenu n'en soit modifié. Il a
+    été popularisé dans les années 1960 grâce à la vente de feuilles Letraset
+    contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion
+    dans des applications de mise en page de texte, comme Aldus PageMaker.
+  </p>
+  <button
+    class="mb-5 mx-0.5 px-5 py-3 text-sm bg-gray-900 text-white shadow rounded-md"
+  >
+    Add New Site
+  </button>
+
+  <div *ngIf=false class="p-5 my-3 bg-teal-100 text-teal-900">
+    Data Saved
+  </div>
+
+  <div class="px-20 py-10 mb-10 my-5 border-4 border-gray-900">
+    <h2 class="text-3xl text-center">Add New Site</h2>
+    <p class="text-center">You can add a new site from the below form</p>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+      <div class="flex flex-col">
+        <label class="text-lg font-medium mb-2">Site Name</label>
+        <input
+          ngModel
+          type="text"
+          name="siteName"
+          class="border-2 border-gray-900 p-2 rounded-lg w-full"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-medium mb-2">Site URL</label>
+        <input
+          ngModel
+          type="text"
+          name="siteURL"
+          class="border-2 border-gray-900 p-2 rounded-lg w-full"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-medium mb-2">Site Image URL</label>
+        <input
+          ngModel
+          type="text"
+          name="siteImgURL"
+          class="border-2 border-gray-900 p-2 rounded-lg w-full"
+        />
+      </div>
+
+      <button
+        class="mt-10 mx-0.5 px-5 py-3 text-sm bg-gray-900 text-white shadow rounded-md"
+      >
+        Add New Site
+      </button>
+      <button
+        class="mb-10 mx-0.5 px-5 py-3 text-sm border-2 border-gray-900 text-gray-900 shadow rounded-md"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+
+  <div class="grid grid-cols-4 gap-5">
+    <div class="shadow-lg border-2 border-gray-900">
+      <img
+        src="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/01/godaddy-a-record-featured-1024x512.png"
+        alt=""
+      />
+      <h3 class="p-3 text-xl font-bold">GoDaddy.com</h3>
+      <div class="w-60 m-3 px-3 bg-blue-200 text-blue-800 rounded-lg text-sm">
+        https://godaddy.com
+      </div>
+
+      <button
+        class="my-3 ml-3 mx-0.5 px-5 py-3 text-sm bg-gray-900 text-white shadow rounded-md"
+      >
+        Add New Password
+      </button>
+      <button
+        class="my-3 ml-3 mx-0.5 px-5 py-3 text-sm border-2 border-gray-900 text-gray-900 shadow rounded-md"
+      >
+        Edit
+      </button>
+      <button
+        class="my-3 ml-3 mx-0.5 px-5 py-3 text-sm border-2 border-gray-900 text-gray-900 shadow rounded-md"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
